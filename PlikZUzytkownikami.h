@@ -1,3 +1,6 @@
+#ifndef PLIKZUZYTKOWNIKAMI_H
+#define PLIKZUZYTKOWNIKAMI_H
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -11,8 +14,9 @@ class PlikZUzytkownikami
 {
 
     string nazwaPlikuZUzytkownikami;
-    bool czyPlikJestPusty(fstream &plikTekstowy);
+    bool czyPlikJestPusty();
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
+    fstream plikTekstowy;
 
 
 public:
@@ -20,3 +24,5 @@ public:
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
 
 };
+
+#endif
