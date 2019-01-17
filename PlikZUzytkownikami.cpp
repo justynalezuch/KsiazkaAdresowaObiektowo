@@ -1,10 +1,9 @@
 #include "PlikZUzytkownikami.h"
 
+PlikZUzytkownikami::PlikZUzytkownikami()
+{
 
-
-PlikZUzytkownikami::PlikZUzytkownikami(){
-
-nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
+    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
 
 
 }
@@ -17,8 +16,9 @@ bool PlikZUzytkownikami::czyPlikJestPusty(fstream &plikTekstowy)
         return false;
 }
 
-void PlikZUzytkownikami::wczytajUzytkownikowZPliku(vector <Uzytkownik> &uzytkownicy)
+vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
 {
+    vector <Uzytkownik> uzytkownicy;
     Uzytkownik uzytkownik;
     string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
 
@@ -34,6 +34,8 @@ void PlikZUzytkownikami::wczytajUzytkownikowZPliku(vector <Uzytkownik> &uzytkown
         }
         plikTekstowy.close();
     }
+
+    return uzytkownicy;
 
 }
 
