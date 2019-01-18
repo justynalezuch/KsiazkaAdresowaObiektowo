@@ -18,10 +18,12 @@ int Uzytkownik::pobierzId()
 {
     return id;
 }
+
 string Uzytkownik::pobierzLogin()
 {
     return login;
 }
+
 string Uzytkownik::pobierzHaslo()
 {
     return haslo;
