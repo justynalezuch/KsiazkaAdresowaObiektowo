@@ -143,9 +143,7 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 
 void UzytkownikMenedzer::wylogujUzytkownika()
 {
-
     idZalogowanegoUzytkownika = 0;
-    cout<<idZalogowanegoUzytkownika<<endl;
 }
 
 
