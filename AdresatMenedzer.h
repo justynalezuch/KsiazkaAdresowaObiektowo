@@ -5,7 +5,7 @@
 
 #include "Adresat.h"
 #include "UzytkownikMenedzer.h"
-//#include "PlikZAdresatami.h"
+#include "PlikZAdresatami.h"
 
 #include <iostream>
 
@@ -14,13 +14,12 @@ using namespace std;
 class AdresatMenedzer
 {
 
-    int idOstatniegoAdresata;
     vector <Adresat> adresaci;
-    UzytkownikMenedzer uzytkownikMenedzer(string nazwaPlikuZUzytkownikami);
-    //PlikZAdresatami plikZAdresatami;
+    PlikZAdresatami plikZAdresatami;
 
     Adresat podajDaneNowegoAdresata();
     int pobierzIdNowegoAdresata();
+
 
    // Uzytkownik podajDaneNowegoUzytkownika();
     //int pobierzIdNowegoUzytkownika();
@@ -30,6 +29,10 @@ class AdresatMenedzer
 
 
 public:
+    int idOstatniegoAdresata;
+
+    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){};
+
 
    void dodajAdresata();
    void wypiszWszystkichAdresatow();
