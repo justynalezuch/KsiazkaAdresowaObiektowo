@@ -36,3 +36,14 @@ void KsiazkaAdresowa::wypiszWszystkichAdresatow()
     adresatMenedzer.wypiszWszystkichAdresatow();
 }
 
+void KsiazkaAdresowa::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
+{
+    adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenedzer.idZalogowanegoUzytkownika);
+
+}
+
+int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
+{
+    return uzytkownikMenedzer.idZalogowanegoUzytkownika;
+}
+

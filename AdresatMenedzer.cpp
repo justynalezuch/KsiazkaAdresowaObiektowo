@@ -1,5 +1,10 @@
 #include "AdresatMenedzer.h"
 
+ void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
+ {
+     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+ }
+
 void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
@@ -13,29 +18,20 @@ void AdresatMenedzer::dodajAdresata()
 
 }
 
-int AdresatMenedzer::pobierzIdNowegoAdresata()
-{
-    if (adresaci.empty() == true)
-        return 1;
-    else
-        return adresaci.back().pobierzId() + 1;
-}
-
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawId(pobierzIdNowegoAdresata());
+    adresat.ustawId(++idOstatniegoAdresata);
 
+    //todo: Dynamicznie pobierac ID zalogowanego uzytkownika
     adresat.ustawIdUzytkownika(1);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
-   // adresat.imie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.imie);
 
     cout << "Podaj nazwisko: ";
     adresat.ustawNazwisko(MetodyPomocnicze::wczytajLinie());
-   // adresat.nazwisko = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.nazwisko);
 
     cout << "Podaj numer telefonu: ";
     adresat.ustawNumerTelefonu(MetodyPomocnicze::wczytajLinie());
@@ -60,5 +56,8 @@ void AdresatMenedzer::wypiszWszystkichAdresatow()
         cout<<adresaci[i].pobierzNumerTelefonu() << endl;
         cout<<adresaci[i].pobierzEmail() << endl;
         cout<<adresaci[i].pobierzAdres() << endl;
+        cout<<endl;
     }
+
+    system("pause");
 }

@@ -17,13 +17,15 @@ public:
 
     };
 
-
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogujUzytkownika();
     void dodajAdresata();
-   void wypiszWszystkichAdresatow();
+    void wypiszWszystkichAdresatow();
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    int pobierzIdZalogowanegoUzytkownika();
+
 
 };
