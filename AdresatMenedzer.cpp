@@ -15,7 +15,6 @@ void AdresatMenedzer::dodajAdresata()
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
-
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()

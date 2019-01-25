@@ -8,9 +8,11 @@ int main()
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
-    ksiazkaAdresowa.rejestracjaUzytkownika();
+   // ksiazkaAdresowa.rejestracjaUzytkownika();
     ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika());
+    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.dodajAdresata();
     ksiazkaAdresowa.wypiszWszystkichAdresatow();
 
 
