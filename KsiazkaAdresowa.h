@@ -32,7 +32,6 @@ public:
     void wylogujUzytkownika();
     void dodajAdresata();
     void wypiszWszystkichAdresatow();
-  //  int pobierzIdZalogowanegoUzytkownika();
 
 
 };
