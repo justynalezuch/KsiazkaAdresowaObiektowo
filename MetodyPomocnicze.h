@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -14,6 +15,8 @@ public:
     static string wczytajLinie();
     static int konwersjaStringNaInt(string liczba);
     static string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    static  string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+
 
 };
 
