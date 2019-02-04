@@ -88,11 +88,12 @@ AdresatMenedzer()
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
-+ konwerjsaIntNaString() : String 
-+ wczytajLinie() : String 
-+ konwersjaStringNaInt() : Int
-+ pobierzLiczbe() : String 
-+ zamienPierwszaLitereNaDuzaAPozostaleNaMale() : String</panel_attributes>
++ konwerjsaIntNaString() : static String 
++ wczytajLinie() : static String 
++ konwersjaStringNaInt() : static Int
++ pobierzLiczbe() : static String 
++ zamienPierwszaLitereNaDuzaAPozostaleNaMale() : static String
++ wczytajZnak() : static Char</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -184,7 +185,10 @@ KsiazkaAdresowa()
 + zmianaHaslaZalogowanegoUzytkownika() : void
 + wylogujUzytkownika() : void
 + dodajAdresata() : void
-+ wypiszWszystkichAdresatow() : void</panel_attributes>
++ wypiszWszystkichAdresatow() : void
++ czyUzytkownikJestZalogowany() : bool
++ wybierzOpcjeZMenuGlownego() : char
++ wybierzOpcjeZMenuUzytkownika() : char</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

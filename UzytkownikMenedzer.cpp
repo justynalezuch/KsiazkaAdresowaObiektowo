@@ -123,10 +123,11 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
         {
             itr -> ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
-            system("pause");
+
         }
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+    system("pause");
 }
 
 void UzytkownikMenedzer::wylogujUzytkownika()
