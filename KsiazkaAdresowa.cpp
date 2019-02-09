@@ -46,6 +46,20 @@ void KsiazkaAdresowa::dodajAdresata()
 
 }
 
+void KsiazkaAdresowa::edytujAdresata()
+{
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->edytujAdresata();
+    }
+    else
+    {
+        cout<<"Aby dodac adresata, nalezy najpierw sie zalogowac"<<endl;
+        system("pause");
+    }
+
+}
+
 void KsiazkaAdresowa::wypiszWszystkichAdresatow()
 {
      if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
@@ -90,9 +104,10 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
     cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "1. Dodaj adresata" << endl;
-    cout << "2. Wyswietl adresatow" << endl;
-    cout << "3. Zmien haslo" << endl;
-    cout << "4. Wyloguj sie" << endl;
+    cout << "2. Edytuj adresata" << endl;
+    cout << "3. Wyswietl adresatow" << endl;
+    cout << "4. Zmien haslo" << endl;
+    cout << "5. Wyloguj sie" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
     wybor = MetodyPomocnicze::wczytajZnak();
