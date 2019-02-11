@@ -138,33 +138,33 @@ void AdresatMenedzer::edytujAdresata()
                 imie = MetodyPomocnicze::wczytajLinie();
                 imie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imie);
                 itr -> ustawImie(imie);
-                //zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
 
-                 nazwisko = MetodyPomocnicze::wczytajLinie();
+                nazwisko = MetodyPomocnicze::wczytajLinie();
                 nazwisko = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwisko);
                 itr -> ustawNazwisko(nazwisko);
-                //zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 numerTelefonu = MetodyPomocnicze::wczytajLinie();
                 itr -> ustawNumerTelefonu(numerTelefonu);
-                //zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 email = MetodyPomocnicze::wczytajLinie();
                 itr -> ustawEmail(email);
-               // zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 adres = MetodyPomocnicze::wczytajLinie();
                 itr -> ustawAdres(adres);
-               // zaktualizujDaneEdytowanegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(*itr);
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;
@@ -181,3 +181,5 @@ void AdresatMenedzer::edytujAdresata()
     }
     system("pause");
 }
+
+
