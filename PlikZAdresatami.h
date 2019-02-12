@@ -37,7 +37,11 @@ public:
     int pobierzIdOstatniegoAdresata();
      void zmienNazweTymczasowegoPlikuNaNazweOdczytywanegoPliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
     void edytujAdresataWPliku(Adresat adresat);
+    void usunAdresataWPliku(int idUsuwanegoAdresata);
     void usunOdczytywanyPlik(string nazwaPlikuZRozszerzeniem);
+    int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata);
+    int pobierzZPlikuIdOstatniegoAdresata();
+
 
 
 
