@@ -37,6 +37,10 @@ public:
     char wybierzOpcjeZMenuEdycja();
     void edytujAdresata();
     void usunAdresata();
+    void wyswietlDaneAdresata(Adresat adresat);
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 
 
