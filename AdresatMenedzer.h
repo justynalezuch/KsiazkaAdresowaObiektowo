@@ -36,6 +36,7 @@ public:
     int podajIdWybranegoAdresata();
     char wybierzOpcjeZMenuEdycja();
     void edytujAdresata();
+    void usunAdresata();
 
 
 
