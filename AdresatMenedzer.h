@@ -33,6 +33,12 @@ public:
 
     void dodajAdresata();
     void wypiszWszystkichAdresatow();
+    int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
+    void edytujAdresata();
+
+
+
 
 };
 
