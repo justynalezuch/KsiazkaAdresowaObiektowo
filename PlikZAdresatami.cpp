@@ -50,7 +50,7 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKresk
     return liniaZDanymiAdresata;
 }
 
- vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
+vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
 {
     Adresat adresat;
     vector <Adresat> adresaci;
@@ -81,7 +81,7 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKresk
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
     }
 
-        return adresaci;
+    return adresaci;
 }
 
 int PlikZAdresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
@@ -108,7 +108,7 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
         {
             switch(numerPojedynczejDanejAdresata)
             {
-          case 1:
+            case 1:
                 adresat.ustawId(atoi(pojedynczaDanaAdresata.c_str()));
                 break;
             case 2:
@@ -149,7 +149,7 @@ int PlikZAdresatami::pobierzIdOstatniegoAdresata()
     return idOstatniegoAdresata;
 }
 
-void PlikZAdresatami::zaktualizujDaneEdytowanegoAdresata(Adresat adresat)
+void PlikZAdresatami::edytujAdresataWPliku(Adresat adresat)
 {
 
     string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt";
@@ -168,10 +168,11 @@ void PlikZAdresatami::zaktualizujDaneEdytowanegoAdresata(Adresat adresat)
 
             if (adresat.pobierzId() == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
             {
-                 if (numerWczytanejLinii == 1)
-                tymczasowyPlikTekstowy<<adresat.pobierzId()<<"|"<<adresat.pobierzIdUzytkownika()<<"|"<<adresat.pobierzImie()<<"|"<<adresat.pobierzNazwisko()<<"|"<<adresat.pobierzNumerTelefonu()<<"|"<<adresat.pobierzEmail()<<"|"<<adresat.pobierzAdres()<<"|";
+                if (numerWczytanejLinii == 1)
+                    tymczasowyPlikTekstowy<<zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(adresat);
                 else if (numerWczytanejLinii > 1)
-                tymczasowyPlikTekstowy<<endl<<adresat.pobierzId()<<"|"<<adresat.pobierzIdUzytkownika()<<"|"<<adresat.pobierzImie()<<"|"<<adresat.pobierzNazwisko()<<"|"<<adresat.pobierzNumerTelefonu()<<"|"<<adresat.pobierzEmail()<<"|"<<adresat.pobierzAdres()<<"|";
+                    tymczasowyPlikTekstowy<<endl<<zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(adresat);
+
             }
             else
             {

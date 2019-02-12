@@ -36,7 +36,7 @@ public:
     bool dopiszAdresataDoPliku(Adresat adresat);
     int pobierzIdOstatniegoAdresata();
      void zmienNazweTymczasowegoPlikuNaNazweOdczytywanegoPliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
-    void zaktualizujDaneEdytowanegoAdresata(Adresat adresat);
+    void edytujAdresataWPliku(Adresat adresat);
     void usunOdczytywanyPlik(string nazwaPlikuZRozszerzeniem);
 
 
